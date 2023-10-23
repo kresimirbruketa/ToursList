@@ -4,8 +4,7 @@ import Tour from "./Tour";
 
 function Tours() {
 
-    const [tours,
-        setTours] = useState([]);
+    const [tours,setTours] = useState([]);
 
     async function fetchData() {
         try {
@@ -18,14 +17,12 @@ function Tours() {
         }
     };
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    useEffect(() => {fetchData();}, []);
 
     function deleteTour(id) {
         // konstanta u koju se sprema novi array i uspoređuje jel id od kliknutog toura
-        // jednak id i onda ga mice i kreira novi array u kojem taj tour (s tim idem) ne
-        // postoji
+        // jednak id-u u originalnom arrayu i onda ga mice i kreira novi array u kojem 
+        // taj tour (s tim idem) ne postoji
         const newTourArrays = tours.filter((tour) => {
             return (tour.id !== id)
         })
@@ -48,6 +45,7 @@ function Tours() {
             <section>
                 <div className="title">
                 <h2>No tours left</h2>
+                <div className="underline"></div>
                 <button className="btn" onClick={fetchData}>Refresh</button>
                 </div>
             </section>
@@ -58,6 +56,7 @@ function Tours() {
         <section>
             <div className="title">
                 <h2>Our tours</h2>
+                <div className="underline"></div>
             </div>
             <div>
                 {tours.map(loopItems)}
