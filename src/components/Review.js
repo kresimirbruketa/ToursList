@@ -6,9 +6,14 @@ function Review() {
 
     const [id, setIndex] = useState(0);
 
+    // dobivanje informacije samo o pojedino itemu u arrayu
+    // destruktururaj objek (data[0] = {prvo ime, prvi job...})
+
     const {name, job, image, text} = data[id];
 
     function checkIndex (id){
+        
+        // -1 ide zato sto array krece brojanje od 0
         if (id > data.length - 1){
             return id = 0
         }
