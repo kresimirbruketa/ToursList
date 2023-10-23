@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/ToursList/static/js/main.b1ceac0c.js",
+    "index.html": "/ToursList/index.html",
+    "main.b1ceac0c.js.map": "/ToursList/static/js/main.b1ceac0c.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b1ceac0c.js"
+  ]
+}
